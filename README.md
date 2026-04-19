@@ -45,3 +45,10 @@ In addition to insure you are choosing the best move, you should have the abilit
 * I used hash map to be able to roll_back with O(1) time complexity, by saving the sqaure for each node as key, and the address of the **Node** object as value.
 * C++ doesn't have garabage collector, so I used **delete** function to delete objects from trailer.
 
+
+Add method(value): Make head points to the new node, and delete node points to by tail.
+![](pic/Doubly_linked_list.png)
+Hash_map: Used to save square(value) as key, Node pointers as value.
+![](pic/hash_map.png)
+Rolling_back(value): Connect previous node of node(value) with next node of node(value). Head will points to the node(value).
+![](pic/rolling_back.png)
