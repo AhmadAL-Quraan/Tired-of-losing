@@ -8,7 +8,7 @@ So you decide to design a custom data structure that helps you recover by storin
 
 At each turn, you have two possible actions:
 
-### 1. Play Normally (Roll the Dice) 
+### **1. Play Normally (Roll the Dice) **
 You move forward as usual, and your new position is added to your history.
 
 ```
@@ -30,11 +30,12 @@ Example:
 Current positions:
 [1, 4, 8, 9, 15, 16, 20, 23, 29, 32]
 
-If you roll back 3 steps (e.g. to position 23):
+If you roll back to position 23
 [1, 4, 8, 9, 15, 16, 20, 29, 32, 23]
 
 You are now on position 23. (The position must be removed from middle and be appended to the end)
 ```
 
 In addition to insure you are choosing the best move, you should have the ability to print all elements of that data structure in non-arbitrary order.
+
 
