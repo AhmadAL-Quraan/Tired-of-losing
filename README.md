@@ -41,7 +41,7 @@ In addition to insure you are choosing the best move, you should have the abilit
 ## Solution
 
 * I implemented Doubly LinkedList with hash map for this task.
-* Add any value to the header and deleting the last element from trailer will take O(1).
+* The header will point to the newest node, while trailer points to old one.
 * I used hash map to be able to roll_back with O(1) time complexity, by saving the value/sqaure for each node as key, and the address of the **Node(value)** object as value.
 * C++ doesn't have garbage collector, used **delete** function to delete objects from trailer for memory efficiency.
 * There are two main classes:
