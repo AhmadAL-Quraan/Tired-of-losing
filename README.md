@@ -38,4 +38,8 @@ You are now on position 23. (The position must be removed from middle and be app
 
 In addition to insure you are choosing the best move, you should have the ability to print all elements of that data structure in non-arbitrary order.
 
+## Solution
 
+* I implemented Doubly LinkedList with hash map for this task.
+* Add any value to the header and deleting the last element from trailer will take O(1).
+* I used hash map to be able to roll_back with O(1) time complexity, by saving the sqaure for each node as key, and the address of the **Node** object as value. 
