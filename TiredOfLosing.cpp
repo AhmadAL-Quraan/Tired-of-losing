@@ -23,6 +23,7 @@ public:
   Node *header = nullptr;
   Node *trailer = nullptr;
 
+  // Add value/square at the head, and delete oldest element
   void add(int value) {
     Node *new_node = new Node(value);
     new_node->previous = header;
@@ -34,6 +35,8 @@ public:
 
     delete_last();
   }
+
+  // Roll back to a previous value and shift all other elements
   void find(int value) {
     Node *node = mp[value];
     if (node && header != node) {
@@ -49,6 +52,8 @@ public:
       header = mp[value];
     }
   }
+
+  // Print current values in the DS
   void print_all() {
     Node *curr = trailer;
     while (curr) {
@@ -99,8 +104,9 @@ int main() {
     printf("Enter number: ");
     scanf("%d", &input);
     int value_num;
+    printf("\n");
     if (input == 1) {
-      printf("Enter the value/ square you wanna add: ");
+      printf("Enter the value/square you wanna add: ");
       scanf("%d", &value_num);
       obj->add(value_num);
     } else if (input == 2) {
@@ -112,5 +118,6 @@ int main() {
     } else {
       printf("Please enter a valid option");
     }
+    printf("\n");
   }
 }
