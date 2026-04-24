@@ -40,16 +40,17 @@ public:
   void find(int value) {
     Node *node = mp[value];
     if (node && header != node) {
-      if (mp[value]->previous) {
-        mp[value]->previous->after = mp[value]->after;
+      if (node->previous) {
+        node->previous->after = node->after;
       } else {
-        trailer = mp[value]->after;
+        trailer = node->after;
       }
-      mp[value]->after->previous = mp[value]->previous;
-      mp[value]->previous = header;
-      mp[value]->previous->after = mp[value];
-      mp[value]->after = nullptr;
-      header = mp[value];
+      node->after->previous = node->previous;
+      // Make the previous attribute of node points to the current header
+      node->previous = header;
+      node->previous->after = node;
+      node->after = nullptr;
+      header = node;
     }
   }
 
