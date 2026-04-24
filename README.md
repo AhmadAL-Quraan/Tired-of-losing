@@ -39,7 +39,7 @@ You are now on position 23. (The position must be removed from middle and be app
 In addition to insure you are choosing the best move, you should have the ability to print all elements of that data structure in non-arbitrary order.
 
 ## Solution
-
+![class diagram](pic/class_diagram.jpeg)
 * I implemented Doubly LinkedList with hash map for this task.
 * The header will point to the newest node, while trailer points to old one.
 * I used hash map to be able to roll_back with O(1) time complexity, by saving the value/sqaure for each node as key, and the address of the **Node(value)** object as value.
